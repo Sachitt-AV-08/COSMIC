@@ -16,59 +16,89 @@ No cloud dependency. No API keys. No subscription. Just your hardware and your d
 
 ## Architecture
 
+See [ARCHITECTURE.md](ARCHITECTURE.md) for the full semantic layering and connected graph.
+
 ```
-                    ┌─────────────────────────┐
-                    │       COSMIC            │
-                    │   (The Device)          │
-                    └────────────┬────────────┘
-                                 │
-        ┌────────────┬───────────┼───────────┬────────────┐
-        │            │           │           │            │
-   ┌────┴────┐ ┌─────┴─────┐ ┌──┴──┐ ┌─────┴─────┐ ┌───┴───┐
-   │  code-  │ │  VoxFlow  │ │ghost│ │ spectra   │ │neural-│
-   │  graph  │ │  Voice    │ │ OS  │ │  Gesture  │ │canvas │
-   └─────────┘ └───────────┘ └─────┘ └───────────┘ └───────┘
-        │            │           │           │            │
-   ┌────┴────┐ ┌─────┴─────┐ ┌──┴──┐ ┌─────┴─────┐ ┌───┴───┐
-   │nakshatra│ │ flowpipe  │ │debug│ │  codahub  │ │supply-│
-   │  Graph  │ │ Pipeline  │ │lens │ │ Registry  │ │ chain │
-   └─────────┘ └───────────┘ └─────┘ └───────────┘ └───────┘
+                         ┌──────────────┐
+                         │     USER     │
+                         └──────┬───────┘
+                                │
+               ┌────────────────┼────────────────┐
+               │                │                │
+         ┌─────┴─────┐   ┌─────┴─────┐   ┌─────┴─────┐
+         │  Cosmic   │   │  Cosmic   │   │  Cosmic   │
+         │  Voice    │   │  Vision   │   │  Explore  │
+         │  Speak    │   │  Gesture  │   │  Navigate │
+         └─────┬─────┘   └─────┬─────┘   └─────┬─────┘
+               └────────────────┼────────────────┘
+                                │
+                         ┌──────┴───────┐
+                         │ Cosmic Core  │
+                         │   (AI OS)    │
+                         └──────┬───────┘
+                                │
+          ┌─────────────────────┼─────────────────────┐
+          │                     │                     │
+   ┌──────┴──────┐      ┌──────┴──────┐      ┌──────┴──────┐
+   │  Cosmic     │      │  Cosmic     │      │  Cosmic     │
+   │  Flow       │      │  Connect    │      │  Debug      │
+   │  Pipelines  │      │  Services   │      │  Errors     │
+   └──────┬──────┘      └──────┬──────┘      └──────┬──────┘
+          └─────────────────────┼─────────────────────┘
+                                │
+                    ┌───────────┼───────────┐
+                    │                       │
+             ┌──────┴──────┐         ┌──────┴──────┐
+             │  Cosmic     │         │  Cosmic     │
+             │  Atlas      │         │  Shield     │
+             │  Code Map   │         │  Security   │
+             └─────────────┘         └─────────────┘
 ```
 
 ## Projects
 
-### Core
+### Experience Layer — How You Interact
 
 | Project | What It Does | Lines |
 |---------|-------------|-------|
-| [**codegraph**](../codegraph) | Interactive 3D codebase knowledge graph — navigate code like star constellations | ~1,600 |
-| [**VoxFlow**](../VoxFlow) | Local-first voice pipeline — no cloud, no API keys, just your voice | ~2,100 |
-| [**ghostos**](../ghostos) | Local AI operating system — the life force of your device | ~3,400 |
-| [**spectra**](../spectra) | Gesture recognition engine — sees what you mean before you touch | ~2,500 |
-| [**nakshatra**](../nakshatra) | 3D codebase graph — maps your code like star constellations | ~1,400 |
+| [**Cosmic Explore**](https://github.com/Sachitt-AV-08/Cosmic%20Explore) | Navigate code by meaning, not folders | ~1,600 |
+| [**Cosmic Voice**](https://github.com/Sachitt-AV-08/Cosmic%20Voice) | Local-first voice — no cloud, no API keys | ~2,100 |
+| [**Cosmic Vision**](https://github.com/Sachitt-AV-08/Cosmic%20Vision) | Gesture control — hands, body, face | ~2,500 |
+| [**Cosmic Canvas**](https://github.com/Sachitt-AV-08/Cosmic%20Canvas) | Draw a sketch, get a 3D model | ~1,500 |
 
-### Infrastructure
+### Intelligence Layer — The Brain
 
 | Project | What It Does | Lines |
 |---------|-------------|-------|
-| [**flowpipe**](../flowpipe) | Visual pipeline builder — drag-and-drop workflow execution | ~1,700 |
-| [**codahub**](../codahub) | Local service registry — discover and health-check your services | ~1,200 |
-| [**neural-canvas**](../neural-canvas) | AI sketch-to-3D — draw a sketch, get a 3D model | ~1,500 |
-| [**debuglens**](../debuglens) | Visual code debugger — paste an error, see the fix | ~1,300 |
-| [**supplychain**](../supplychain) | Supply chain security — scan dependencies for vulnerabilities | ~1,350 |
+| [**Cosmic Core**](https://github.com/Sachitt-AV-08/Cosmic%20Core) | AI operating system — agents, memory, tools, automation | ~3,400 |
 
-### Companion Projects
+### Orchestration Layer — Connecting Things
+
+| Project | What It Does | Lines |
+|---------|-------------|-------|
+| [**Cosmic Flow**](https://github.com/Sachitt-AV-08/Cosmic%20Flow) | Visual pipeline builder — drag, drop, execute | ~1,700 |
+| [**Cosmic Connect**](https://github.com/Sachitt-AV-08/Cosmic%20Connect) | Service registry — discover & health-check | ~1,200 |
+| [**Cosmic Debug**](https://github.com/Sachitt-AV-08/Cosmic%20Debug) | Visual debugger — paste error, see the fix | ~1,300 |
+| [**Cosmic Atlas**](https://github.com/Sachitt-AV-08/Cosmic%20Atlas) | 3D codebase knowledge graph — map your code | ~1,400 |
+
+### Security Layer — Protection
+
+| Project | What It Does | Lines |
+|---------|-------------|-------|
+| [**Cosmic Shield**](https://github.com/Sachitt-AV-08/Cosmic%20Shield) | Supply chain security — scan deps, CVEs, SBOM | ~1,350 |
+
+### Infrastructure — Developer Tools
 
 | Project | What It Does |
 |---------|-------------|
-| [**neural**](../neural) | Unified CLI for local + cloud LLMs |
-| [**envcheck**](../envcheck) | Environment variable validator |
-| [**patchwork**](../patchwork) | Config file patcher |
-| [**servehere**](../servehere) | Instant file server with QR code |
-| [**modelview**](../modelview) | 3D model viewer (GLB/OBJ/STL) |
-| [**imagediff**](../imagediff) | Before/after image comparison |
-| [**picgrid**](../picgrid) | Image grid comparator |
-| [**pixelflow**](../pixelflow) | Terminal image toolbox |
+| [**neural**](https://github.com/Sachitt-AV-08/neural) | Unified CLI for local + cloud LLMs |
+| [**envcheck**](https://github.com/Sachitt-AV-08/envcheck) | Environment variable validator |
+| [**patchwork**](https://github.com/Sachitt-AV-08/patchwork) | Config file patcher |
+| [**servehere**](https://github.com/Sachitt-AV-08/servehere) | Instant file server with QR code |
+| [**modelview**](https://github.com/Sachitt-AV-08/modelview) | 3D model viewer (GLB/OBJ/STL) |
+| [**imagediff**](https://github.com/Sachitt-AV-08/imagediff) | Before/after image comparison |
+| [**picgrid**](https://github.com/Sachitt-AV-08/picgrid) | Image grid comparator |
+| [**pixelflow**](https://github.com/Sachitt-AV-08/pixelflow) | Terminal image toolbox |
 
 ## Quick Start
 
@@ -86,7 +116,9 @@ Each project is independently installable. See individual READMEs for details.
 
 - **Local-first** — No cloud. No API keys. Your hardware, your data.
 - **Composable** — Each project works standalone. Combine them for more power.
-- **Beautiful** — Dark cosmic theme across all projects. Glowing nodes. Particle effects. Clean UI.
+- **Layered** — Infrastructure → Security → Orchestration → Intelligence → Experience.
+- **Connected** — Every component can talk to every other component.
+- **Beautiful** — Dark cosmic theme. Glowing nodes. Clean UI across all projects.
 - **Functional** — Real code, not stubs. Every project runs and does something useful.
 
 ## Built By
