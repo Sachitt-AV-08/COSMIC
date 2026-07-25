@@ -25,13 +25,13 @@ No cloud dependency. No API keys. No subscription. Just your hardware and your d
         ┌────────────┬───────────┼───────────┬────────────┐
         │            │           │           │            │
    ┌────┴────┐ ┌─────┴─────┐ ┌──┴──┐ ┌─────┴─────┐ ┌───┴───┐
-   │  Vayu   │ │   Vac     │ │Prana│ │  Drishti  │ │Rupa   │
-   │ Files   │ │  Voice    │ │ OS  │ │  Gesture  │ │ 3D    │
+   │  code-  │ │  VoxFlow  │ │ghost│ │ spectra   │ │neural-│
+   │  graph  │ │  Voice    │ │ OS  │ │  Gesture  │ │canvas │
    └─────────┘ └───────────┘ └─────┘ └───────────┘ └───────┘
         │            │           │           │            │
    ┌────┴────┐ ┌─────┴─────┐ ┌──┴──┐ ┌─────┴─────┐ ┌───┴───┐
-   │Nakshatra│ │   Sutra   │ │Kala │ │  Chakra   │ │Kavach │
-   │  Graph  │ │ Pipeline  │ │Debug│ │ Registry  │ │Secure │
+   │nakshatra│ │ flowpipe  │ │debug│ │  codahub  │ │supply-│
+   │  Graph  │ │ Pipeline  │ │lens │ │ Registry  │ │ chain │
    └─────────┘ └───────────┘ └─────┘ └───────────┘ └───────┘
 ```
 
@@ -41,21 +41,21 @@ No cloud dependency. No API keys. No subscription. Just your hardware and your d
 
 | Project | What It Does | Lines |
 |---------|-------------|-------|
-| [**Vayu**](../vayu) | File explorer — flies through code like the wind | ~1,600 |
-| [**Vac**](../vac) | Voice pipeline — speaks and listens locally | ~2,100 |
-| [**Prana**](../prana) | AI operating system — the life force of your device | ~3,400 |
-| [**Drishti**](../drishti) | Gesture engine — sees what you mean before you touch | ~2,500 |
-| [**Nakshatra**](../nakshatra) | Code graph — maps your code like star constellations | ~1,400 |
+| [**codegraph**](../codegraph) | Interactive 3D codebase knowledge graph — navigate code like star constellations | ~1,600 |
+| [**VoxFlow**](../VoxFlow) | Local-first voice pipeline — no cloud, no API keys, just your voice | ~2,100 |
+| [**ghostos**](../ghostos) | Local AI operating system — the life force of your device | ~3,400 |
+| [**spectra**](../spectra) | Gesture recognition engine — sees what you mean before you touch | ~2,500 |
+| [**nakshatra**](../nakshatra) | 3D codebase graph — maps your code like star constellations | ~1,400 |
 
 ### Infrastructure
 
 | Project | What It Does | Lines |
 |---------|-------------|-------|
-| [**Sutra**](../sutra) | Pipeline builder — threads of execution | ~1,700 |
-| [**Chakra**](../chakra) | Service registry — the energy center | ~1,200 |
-| [**Rupa**](../rupa) | Sketch to 3D — gives form to ideas | ~1,500 |
-| [**Kala**](../kala) | Debugger — traces through time | ~1,300 |
-| [**Kavach**](../kavach) | Supply chain security — the armor | ~1,350 |
+| [**flowpipe**](../flowpipe) | Visual pipeline builder — drag-and-drop workflow execution | ~1,700 |
+| [**codahub**](../codahub) | Local service registry — discover and health-check your services | ~1,200 |
+| [**neural-canvas**](../neural-canvas) | AI sketch-to-3D — draw a sketch, get a 3D model | ~1,500 |
+| [**debuglens**](../debuglens) | Visual code debugger — paste an error, see the fix | ~1,300 |
+| [**supplychain**](../supplychain) | Supply chain security — scan dependencies for vulnerabilities | ~1,350 |
 
 ### Companion Projects
 
@@ -74,7 +74,7 @@ No cloud dependency. No API keys. No subscription. Just your hardware and your d
 
 ```bash
 # Clone the ecosystem
-git clone --recurse-submodules https://github.com/Sachitt-AV-08/COSMIC.git
+git clone https://github.com/Sachitt-AV-08/COSMIC.git
 
 # Or install individual projects
 pip install fastapi uvicorn numpy
@@ -86,7 +86,6 @@ Each project is independently installable. See individual READMEs for details.
 
 - **Local-first** — No cloud. No API keys. Your hardware, your data.
 - **Composable** — Each project works standalone. Combine them for more power.
-- **Mythological** — Named after Hindu/Vedic concepts. Vayu (wind), Vac (speech), Prana (breath), Drishti (sight), Nakshatra (stars).
 - **Beautiful** — Dark cosmic theme across all projects. Glowing nodes. Particle effects. Clean UI.
 - **Functional** — Real code, not stubs. Every project runs and does something useful.
 
